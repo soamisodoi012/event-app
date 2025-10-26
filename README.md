@@ -86,7 +86,7 @@ Explanation of Design Decisions
 
 
 
-##  Backend Architecture Decisions
+###  Backend Architecture Decisions
 
     1. Django REST Framework Selection
    Decision: Chose Django REST Framework over other Python web frameworks
