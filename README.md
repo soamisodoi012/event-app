@@ -86,7 +86,7 @@ Explanation of Design Decisions
 
 ###  Backend Architecture Decisions
 
-    1. Django REST Framework Selection
+ Django REST Framework Selection
    Decision: Chose Django REST Framework over other Python web frameworks
    Reasoning:
 
@@ -100,7 +100,7 @@ Explanation of Design Decisions
 
    Mature ecosystem with extensive community support
 
-   2. Database Design
+ Database Design
    Decision: PostgreSQL with normalized schema design
    Reasoning:
 
@@ -112,7 +112,7 @@ Explanation of Design Decisions
 
    Data consistency - Unique constraints prevent duplicate bookings
 
-   3. JWT Authentication Implementation
+ JWT Authentication Implementation
    Decision: JSON Web Tokens for user authentication
    Reasoning:
 
@@ -124,7 +124,7 @@ Explanation of Design Decisions
 
    Modern standard - Industry best practice for REST APIs
    # Frontend Architecture Decisions
-   1. React Functional Components
+   React Functional Components
    Decision: Used functional components with hooks instead of class components
    Reasoning:
 
@@ -136,7 +136,7 @@ Explanation of Design Decisions
 
    Easier testing - Simpler component testing approach
 
-   2. State Management Approach
+State Management Approach
    Decision: Context API + useState/useEffect instead of Redux
    Reasoning:
 
