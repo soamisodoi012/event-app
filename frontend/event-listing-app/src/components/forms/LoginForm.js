@@ -61,7 +61,7 @@ const LoginForm = () => {
 
   return (
     <div className="auth-container">
-      <h2 className="auth-title">Welcome Back! 👋</h2>
+      <h2 className="auth-title">Welcome Back!</h2>
       <form onSubmit={handleSubmit} className="auth-form">
         {error && <div className="error">{error}</div>}
         
