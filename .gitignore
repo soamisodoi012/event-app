@@ -1,0 +1,6 @@
+# Backend environment files
+backend/.env
+backend/env/
+
+# Frontend node_modules
+frontend/event-listing-app/node_modules/

@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# EventFinder - Event Booking App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack event booking application built with Django REST Framework backend and React frontend that allows users to browse events, view details, and book tickets.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### ✅ Core Requirements Met
+- **Event List Page** - Browse all upcoming events with thumbnails, titles, dates, and locations
+- **Event Detail Page** - View complete event information including descriptions and full-size images
+- **Ticket Booking System** - Book tickets with real-time availability updates
+- **My Bookings Page** - Personal booking history with event titles and dates
 
-### `npm start`
+### ✅ Bonus Features Implemented
+- 🔍 **Search & Filter** - Search events by name and filter by location
+- 💾 **Persistent Storage** - Bookings persist across app restarts using localStorage
+- 🛡️ **Error Handling** - Comprehensive error handling for API calls and user interactions
+- 🎨 **Clean Architecture** - Well-structured, maintainable code with separation of concerns
+- ⏰ **Event Status Management** - Automatic detection and handling of past events
+- 🔐 **User Authentication** - JWT-based registration and login system
+- 📱 **Responsive Design** - Mobile-friendly interface that works on all devices
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- **Python 3.11+** with Django 4.2 and Django REST Framework
+- **PostgreSQL** - Robust relational database
+- **JWT Authentication** - Secure token-based authentication
+- **Pillow** - Image processing and handling
+- **django-cors-headers** - CORS management for frontend communication
 
-### `npm test`
+### Frontend
+- **React 18** - Modern React with functional components and hooks
+- **React Router DOM** - Client-side routing and navigation
+- **Axios** - HTTP client for API communication
+- **Context API** - State management for authentication
+- **CSS3** - Custom responsive styling with modern features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Setup Instructions
 
-### `npm run build`
+### Prerequisites
+- Python 3.11 or higher
+- Node.js 18 or higher
+- PostgreSQL 12 or higher
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 1: Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd event-app/backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Create and activate virtual environment
+python -m venv venv
 
-### `npm run eject`
+# On Windows:
+venv\Scripts\activate
+# On Mac/Linux:
+source venv/bin/activate
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Install Python dependencies
+pip install -r requirements.txt
