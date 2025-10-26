@@ -42,7 +42,7 @@ A full-stack event booking application built with Django REST Framework backend 
 - Node.js 18 or higher
 - PostgreSQL 12 or higher
 
-### Step 1: Backend Setup
+###  Backend Setup
 
 ```bash
 # Clone the repository
