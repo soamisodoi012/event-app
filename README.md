@@ -105,7 +105,7 @@ A full-stack event booking application built with Django REST Framework backend 
 
 ### Access the Application
 - **Frontend Application**: [http://localhost:3000](http://localhost:3000)
-- **Backend API**: [http://localhost:8000/api](http://localhost:8000/api)
+- **Backend **: [http://localhost:8000/api](http://localhost:8000/)
 - **Django Admin**: [http://localhost:8000/admin](http://localhost:8000/admin)
 
 ## Explanation of Design Decisions
