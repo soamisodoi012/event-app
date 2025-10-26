@@ -44,7 +44,7 @@ A full-stack event booking application built with Django REST Framework backend 
 
 ###  Backend Setup
 # Clone the repository
-git clone https://github.com/soamisodoi012/event-app.git
+ # git clone https://github.com/soamisodoi012/event-app.git
 cd event-app/backend
 
 # Create and activate virtual environment
