@@ -2,24 +2,24 @@
 
 A full-stack event booking application built with Django REST Framework backend and React frontend that allows users to browse events, view details, and book tickets.
 
-##  Features
+## Features
 
 ### Core Requirements Met
-- **Event List Page** - Browse all upcoming events with thumbnails, titles, dates, and locations
-- **Event Detail Page** - View complete event information including descriptions and full-size images
-- **Ticket Booking System** - Book tickets with real-time availability updates
-- **My Bookings Page** - Personal booking history with event titles and dates
+- **Event List Page**: Browse all upcoming events with thumbnails, titles, dates, and locations.
+- **Event Detail Page**: View complete event information including descriptions and full-size images.
+- **Ticket Booking System**: Book tickets with real-time availability updates.
+- **My Bookings Page**: Personal booking history with event titles and dates.
 
-###  Bonus Features Implemented
--  **Search & Filter** - Search events by name and filter by location
--  **Persistent Storage** - Bookings persist across app restarts using localStorage
--  **Error Handling** - Comprehensive error handling for API calls and user interactions
--  **Clean Architecture** - Well-structured, maintainable code with separation of concerns
--  **Event Status Management** - Automatic detection and handling of past events
--  **User Authentication** - JWT-based registration and login system
--  **Responsive Design** - Mobile-friendly interface that works on all devices
+### Bonus Features Implemented
+- **Search & Filter**: Search events by name and filter by location.
+- **Persistent Storage**: Bookings persist across app restarts using localStorage.
+- **Error Handling**: Comprehensive error handling for API calls and user interactions.
+- **Clean Architecture**: Well-structured, maintainable code with separation of concerns.
+- **Event Status Management**: Automatic detection and handling of past events.
+- **User Authentication**: JWT-based registration and login system.
+- **Responsive Design**: Mobile-friendly interface that works on all devices.
 
-##  Tech Stack
+## Tech Stack
 
 ### Backend
 - **Python 3.11+** with Django 4.2 and Django REST Framework
@@ -42,107 +42,100 @@ A full-stack event booking application built with Django REST Framework backend 
 - Node.js 18 or higher
 - PostgreSQL 12 or higher
 
-###  Backend Setup
-# Clone the repository
- git clone https://github.com/soamisodoi012/event-app.git
- cd event-app/backend
+### Backend Setup
 
-# Create and activate virtual environment
- python -m venv venv
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/soamisodoi012/event-app.git
+    cd event-app/backend
+    ```
 
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
+2. **Create and activate virtual environment**:
+    ```bash
+    python -m venv venv
+    ```
+    - On Windows:
+        ```bash
+        venv\Scripts\activate
+        ```
+    - On Mac/Linux:
+        ```bash
+        source venv/bin/activate
+        ```
 
-# Install Python dependencies
- pip install -r requirements.txt
-# Database Configuration
-C REATE DATABASE event_db;
-# Configure Environment Variables
-Create a .env file in the backend directory:
-# Backend Initialization
-# Run database migrations
- python manage.py makemigrations
- python manage.py migrate
-# Create superuser (follow prompts)
- python manage.py createsuperuser
- python manage.py runserver
-# Frontend Setup
-Open a new terminal and navigate to the frontend directory:
-cd ../frontend
-# Install Node.js dependencies
-npm install
-# Start the React development server
-npm start
-# Access the Application
-Frontend Application: http://localhost:3000
-Backend API: http://localhost:8000/api
-Django Admin: http://localhost:8000/admin
-Explanation of Design Decisions
+3. **Install Python dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+4. **Database Configuration**:
+    ```sql
+    CREATE DATABASE event_db;
+    ```
 
+5. **Configure Environment Variables**:
+    Create a `.env` file in the backend directory.
 
-###  Backend Architecture Decisions
+6. **Backend Initialization**:
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py createsuperuser  # Follow prompts
+    python manage.py runserver
+    ```
 
- Django REST Framework Selection
-   Decision: Chose Django REST Framework over other Python web frameworks
-   Reasoning:
+### Frontend Setup
 
-   Built-in authentication system with JWT support
+1. **Open a new terminal and navigate to the frontend directory**:
+    ```bash
+    cd ../frontend
+    ```
 
-   Automatic API documentation with browsable API
+2. **Install Node.js dependencies**:
+    ```bash
+    npm install
+    ```
 
-      Serializer classes for robust data validation and transformation
+3. **Start the React development server**:
+    ```bash
+    npm start
+    ```
 
-   Excellent Django ORM integration for database operations
+### Access the Application
+- **Frontend Application**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:8000/api](http://localhost:8000/api)
+- **Django Admin**: [http://localhost:8000/admin](http://localhost:8000/admin)
 
-   Mature ecosystem with extensive community support
+## Explanation of Design Decisions
 
- Database Design
-   Decision: PostgreSQL with normalized schema design
-   Reasoning:
+### Backend Architecture Decisions
 
-   Relational integrity - Foreign key constraints prevent orphaned records
+- **Django REST Framework Selection**:
+    - **Reasoning**:
+        - Built-in authentication system with JWT support.
+        - Automatic API documentation with browsable API.
+        - Serializer classes for robust data validation and transformation.
+        - Excellent Django ORM integration for database operations.
+        - Mature ecosystem with extensive community support.
 
-   Atomic transactions - Ensures ticket booking operations are all-or-nothing
+- **Database Design**:
+    - **Reasoning**:
+        - Relational integrity with foreign key constraints.
+        - Atomic transactions ensure all-or-nothing operations.
+        - Scalability for concurrent bookings.
+        - Unique constraints to prevent duplicate bookings.
 
-   Scalability - PostgreSQL handles concurrent bookings efficiently
+- **JWT Authentication Implementation**:
+    - **Reasoning**:
+        - Stateless, scalable, and secure.
+        - Industry best practice for REST APIs.
 
-   Data consistency - Unique constraints prevent duplicate bookings
+### Frontend Architecture Decisions
 
- JWT Authentication Implementation
-   Decision: JSON Web Tokens for user authentication
-   Reasoning:
+- **React Functional Components**:
+    - **Reasoning**:
+        - Modern standards, cleaner code structure, improved performance, and easier testing.
 
-   Stateless - No server-side session storage required
-
-   Scalable - Works seamlessly with multiple frontend clients
-
-   Secure - Token-based authentication with expiration
-
-   Modern standard - Industry best practice for REST APIs
-   # Frontend Architecture Decisions
-   React Functional Components
-   Decision: Used functional components with hooks instead of class components
-   Reasoning:
-
-   Modern React standards - Industry best practice
-
-   Cleaner code structure - Less boilerplate, more readable
-
-   Better performance - Optimized re-renders with hooks
-
-   Easier testing - Simpler component testing approach
-
-State Management Approach
-   Decision: Context API + useState/useEffect instead of Redux
-   Reasoning:
-
-   Reduced complexity - Appropriate for medium-sized application
-
-   No external dependencies - Built-in React capabilities
-
-   Sufficient for needs - Handles authentication and user state effectively
-
-   Performance optimized - Proper context splitting prevents unnecessary re-renders
+- **State Management Approach**:
+    - **Reasoning**:
+        - Reduced complexity, no external dependencies, and sufficient for application needs.
