@@ -82,67 +82,70 @@ npm start
 Frontend Application: http://localhost:3000
 Backend API: http://localhost:8000/api
 Django Admin: http://localhost:8000/admin
- Explanation of Design Decisions
+Explanation of Design Decisions
+
+
+
 ##  Backend Architecture Decisions
 
-1. Django REST Framework Selection
-Decision: Chose Django REST Framework over other Python web frameworks
-Reasoning:
+    1. Django REST Framework Selection
+   Decision: Chose Django REST Framework over other Python web frameworks
+   Reasoning:
 
-Built-in authentication system with JWT support
+   Built-in authentication system with JWT support
 
-Automatic API documentation with browsable API
+   Automatic API documentation with browsable API
 
-Serializer classes for robust data validation and transformation
+      Serializer classes for robust data validation and transformation
 
-Excellent Django ORM integration for database operations
+   Excellent Django ORM integration for database operations
 
-Mature ecosystem with extensive community support
+   Mature ecosystem with extensive community support
 
-2. Database Design
-Decision: PostgreSQL with normalized schema design
-Reasoning:
+   2. Database Design
+   Decision: PostgreSQL with normalized schema design
+   Reasoning:
 
-Relational integrity - Foreign key constraints prevent orphaned records
+   Relational integrity - Foreign key constraints prevent orphaned records
 
-Atomic transactions - Ensures ticket booking operations are all-or-nothing
+   Atomic transactions - Ensures ticket booking operations are all-or-nothing
 
-Scalability - PostgreSQL handles concurrent bookings efficiently
+   Scalability - PostgreSQL handles concurrent bookings efficiently
 
-Data consistency - Unique constraints prevent duplicate bookings
+   Data consistency - Unique constraints prevent duplicate bookings
 
-3. JWT Authentication Implementation
-Decision: JSON Web Tokens for user authentication
-Reasoning:
+   3. JWT Authentication Implementation
+   Decision: JSON Web Tokens for user authentication
+   Reasoning:
 
-Stateless - No server-side session storage required
+   Stateless - No server-side session storage required
 
-Scalable - Works seamlessly with multiple frontend clients
+   Scalable - Works seamlessly with multiple frontend clients
 
-Secure - Token-based authentication with expiration
+   Secure - Token-based authentication with expiration
 
-Modern standard - Industry best practice for REST APIs
-# Frontend Architecture Decisions
-1. React Functional Components
-Decision: Used functional components with hooks instead of class components
-Reasoning:
+   Modern standard - Industry best practice for REST APIs
+   # Frontend Architecture Decisions
+   1. React Functional Components
+   Decision: Used functional components with hooks instead of class components
+   Reasoning:
 
-Modern React standards - Industry best practice
+   Modern React standards - Industry best practice
 
-Cleaner code structure - Less boilerplate, more readable
+   Cleaner code structure - Less boilerplate, more readable
 
-Better performance - Optimized re-renders with hooks
+   Better performance - Optimized re-renders with hooks
 
-Easier testing - Simpler component testing approach
+   Easier testing - Simpler component testing approach
 
-2. State Management Approach
-Decision: Context API + useState/useEffect instead of Redux
-Reasoning:
+   2. State Management Approach
+   Decision: Context API + useState/useEffect instead of Redux
+   Reasoning:
 
-Reduced complexity - Appropriate for medium-sized application
+   Reduced complexity - Appropriate for medium-sized application
 
-No external dependencies - Built-in React capabilities
+   No external dependencies - Built-in React capabilities
 
-Sufficient for needs - Handles authentication and user state effectively
+   Sufficient for needs - Handles authentication and user state effectively
 
-Performance optimized - Proper context splitting prevents unnecessary re-renders
+   Performance optimized - Proper context splitting prevents unnecessary re-renders
