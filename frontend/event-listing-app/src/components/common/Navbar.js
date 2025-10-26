@@ -29,7 +29,7 @@ const Navbar = () => {
               background: location.pathname === '/' ? 'rgba(255,255,255,0.2)' : 'transparent' 
             }}
           >
-            🎪 All Events
+            All Events
           </Link>
           
           {isAuthenticated ? (
@@ -45,7 +45,7 @@ const Navbar = () => {
               </Link>
               
               <span className="user-welcome">
-                👋 Hello, {userInfo.fullName}!
+                Hello, {userInfo.fullName}!
               </span>
               
               <button 
