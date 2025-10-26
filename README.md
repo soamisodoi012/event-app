@@ -76,8 +76,15 @@ A full-stack event booking application built with Django REST Framework backend 
 
 5. **Configure Environment Variables**:
     Create a `.env` file in the backend directory.
+   DB_NAME
+   DB_USER
+   DB_PASSWORD
+   DB_HOST
+   DB_PORT
+   SECRET_KEY
+   DEBUG=True
 
-6. **Backend Initialization**:
+7. **Backend Initialization**:
     ```bash
     python manage.py makemigrations
     python manage.py migrate
