@@ -44,11 +44,11 @@ A full-stack event booking application built with Django REST Framework backend 
 
 ###  Backend Setup
 # Clone the repository
- # git clone https://github.com/soamisodoi012/event-app.git
-cd event-app/backend
+ git clone https://github.com/soamisodoi012/event-app.git
+ cd event-app/backend
 
 # Create and activate virtual environment
-python -m venv venv
+ python -m venv venv
 
 # On Windows:
 venv\Scripts\activate
@@ -56,19 +56,18 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # Install Python dependencies
-pip install -r requirements.txt
+ pip install -r requirements.txt
 # Database Configuration
-CREATE DATABASE event_db;
+C REATE DATABASE event_db;
 # Configure Environment Variables
 Create a .env file in the backend directory:
 # Backend Initialization
-bash
 # Run database migrations
-python manage.py makemigrations
-python manage.py migrate
+ python manage.py makemigrations
+ python manage.py migrate
 # Create superuser (follow prompts)
-python manage.py createsuperuser
-python manage.py runserver
+ python manage.py createsuperuser
+ python manage.py runserver
 # Frontend Setup
 Open a new terminal and navigate to the frontend directory:
 cd ../frontend
