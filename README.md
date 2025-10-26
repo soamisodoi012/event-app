@@ -59,3 +59,28 @@ source venv/bin/activate
 
 # Install Python dependencies
 pip install -r requirements.txt
+# Database Configuration
+CREATE DATABASE event_db;
+Configure Environment Variables
+Create a .env file in the backend directory:
+# Backend Initialization
+bash
+# Run database migrations
+python manage.py makemigrations
+python manage.py migrate
+# Create superuser (follow prompts)
+python manage.py createsuperuser
+python manage.py runserver
+# Frontend Setup
+Open a new terminal and navigate to the frontend directory:
+
+bash
+cd ../frontend
+# Install Node.js dependencies
+npm install
+# Start the React development server
+npm start
+# Access the Application
+Frontend Application: http://localhost:3000
+Backend API: http://localhost:8000/api
+Django Admin: http://localhost:8000/admin
