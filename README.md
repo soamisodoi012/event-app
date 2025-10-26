@@ -61,7 +61,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 # Database Configuration
 CREATE DATABASE event_db;
-Configure Environment Variables
+# Configure Environment Variables
 Create a .env file in the backend directory:
 # Backend Initialization
 bash
@@ -73,8 +73,6 @@ python manage.py createsuperuser
 python manage.py runserver
 # Frontend Setup
 Open a new terminal and navigate to the frontend directory:
-
-bash
 cd ../frontend
 # Install Node.js dependencies
 npm install
