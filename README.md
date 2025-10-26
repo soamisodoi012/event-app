@@ -48,6 +48,7 @@ A full-stack event booking application built with Django REST Framework backend 
     ```bash
     git clone https://github.com/soamisodoi012/event-app.git
     cd event-app/backend
+    cd event_manager
     ```
 
 2. **Create and activate virtual environment**:
@@ -88,7 +89,8 @@ A full-stack event booking application built with Django REST Framework backend 
 
 1. **Open a new terminal and navigate to the frontend directory**:
     ```bash
-    cd ../frontend
+    cd ../../frontend
+    cd event-listing-app
     ```
 
 2. **Install Node.js dependencies**:
