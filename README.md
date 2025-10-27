@@ -87,6 +87,7 @@ A full-stack event booking application built with Django REST Framework backend 
 
 7. **Backend Initialization**:
     ```bash
+    cd event_manager
     python manage.py makemigrations
     python manage.py migrate
     python manage.py createsuperuser  # Follow prompts
