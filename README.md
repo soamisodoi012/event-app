@@ -58,6 +58,7 @@ A full-stack event booking application built with Django REST Framework backend 
     - On Windows:
         ```bash
         venv\Scripts\activate
+        cd ..
         ```
     - On Mac/Linux:
         ```bash
